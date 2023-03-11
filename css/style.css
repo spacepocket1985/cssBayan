@@ -109,6 +109,10 @@
     .accordion-item:hover .accordion-item__content {
         height: 0;
     }
+
+    .accordion-item__trigger {
+        background-size: 1.8rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
