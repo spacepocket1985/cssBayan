@@ -41,7 +41,7 @@
     font-weight: bold;
     border: .125rem dashed rgb(132, 122, 122);
     transition: 0.5s;
-    background-image: url(./img/icon_pulse.png);
+    background-image: url(../img/icon_pulse.png);
     background-repeat: no-repeat;
     background-size: 0;
     background-position: top 5% right 2%;
@@ -62,7 +62,7 @@
 
 .accordion-item__input:checked~.accordion-item__trigger {
     background-color: aliceblue;
-    background-image: url(./img/icon_cross.png);
+    background-image: url(../img/icon_cross.png);
     color: #000;
 }
 
