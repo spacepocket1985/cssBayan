@@ -77,6 +77,7 @@
 }
 
 /* media start */
+/* this media query will work for breakpoint 1920x1080  */
 @media screen and (min-width: 821px) {
     .accordion-item:hover .mem {
         width: 30vw;
@@ -106,7 +107,7 @@
         
 
 }
-
+/* this media query will work for breakpoint 820x1180  */
 @media screen and (max-width: 820px) {
     .wrapper {
         width: 90vw;
@@ -138,7 +139,7 @@
     }
 }
 
-
+/* this media query will work for breakpoint 320x568  */
 @media screen and (max-width: 320px) {
     .wrapper {
         width: 95vw;
