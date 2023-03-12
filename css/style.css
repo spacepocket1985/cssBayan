@@ -111,7 +111,11 @@
     .wrapper {
         width: 90vw;
     }
+    
+    .accordion {
+        width: 60vw;
 
+    }
     .accordion-item__trigger {
         background-position: top 0.7rem right 0.5rem;
 
@@ -128,12 +132,16 @@
     .accordion-item__trigger {
         background-size: 1.8rem;
     }
+
+    .accordion-item__input:checked~.accordion-item__trigger .mem {
+        width: 45vw;
+    }
 }
 
 
 @media screen and (max-width: 320px) {
     .wrapper {
-        width: 90vw;
+        width: 95vw;
     }
 
     .h1-task__title {
@@ -141,11 +149,11 @@
     }
 
     .accordion-item {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .accordion-item__input:checked~.accordion-item__trigger .mem {
-        width: 36vw;
+        width: 45vw;
     }
 
     .accordion-item__trigger {
