@@ -46,7 +46,6 @@
     background-position: top 5% right 2%;
     cursor: pointer;
     color: #0442ae;
-
 }
 
 .accordion-item__content {
@@ -107,7 +106,6 @@
         width: 45vw;
     }
 
-
     .accordion-item__trigger {
         background-size: 1.8rem;
     }
@@ -128,6 +126,6 @@
     }
 
     .mem {
-        width: 40vw;
+        width: 39vw;
     }
 }
