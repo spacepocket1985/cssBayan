@@ -76,9 +76,22 @@
     height: auto;
 }
 
+
+
+.accordion-item:active .accordion-item__trigger  {
+    color: #0442ae;
+    background-image: url(../img/icon_cross-active.png);
+}
+
+.accordion-item:active .mem {
+    background-color: rgb(184, 189, 189);
+}
+
 /* media start */
-/* this media query will work for breakpoint 1920x1080  */
-@media screen and (min-width: 821px) {
+
+/* when hover is supported */
+@media (hover: hover) {
+    
     .accordion-item:hover .mem {
         width: 30vw;
     }
@@ -95,6 +108,10 @@
         background-size: 1.8rem;
         color: #000;
     }
+  }
+
+/* this media query will work for breakpoint 1920x1080  */
+@media screen and (min-width: 821px) {
 
     .accordion-item:active .accordion-item__trigger  {
         color: #0442ae;
@@ -105,7 +122,6 @@
         background-color: rgb(184, 189, 189);
     }
         
-
 }
 /* this media query will work for breakpoint 820x1180  */
 @media screen and (max-width: 820px) {
@@ -131,7 +147,7 @@
     }
 
     .accordion-item__trigger {
-        background-size: 1.8rem;
+        background-size: 1.7rem;
     }
 
     .accordion-item__input:checked~.accordion-item__trigger .mem {
@@ -161,3 +177,4 @@
         background-size: 1.2rem;
     }
 }
+
