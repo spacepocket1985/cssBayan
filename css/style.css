@@ -52,7 +52,6 @@
     display: block;
     text-align: center;
     border-top: 0;
-    height: 0;
     overflow: hidden;
     transition: 0.5s;
     cursor: pointer;
@@ -66,20 +65,19 @@
 
 
 .mem {
-    width: 30vw;
+    width: 0;
+    transition: 0.5s;
 }
 
-
-.accordion-item__input:checked~.accordion-item__trigger .accordion-item__content {
-    height: auto;
-    padding: 1rem 0;
+.accordion-item__input:checked~.accordion-item__trigger .mem {
+    width: 35vw;
 }
 
 /* media start */
 @media screen and (min-width: 821px) {
-    .accordion-item:hover .accordion-item__content {
-        height: auto;
-        padding: 1rem 0;
+    .accordion-item:hover .mem {
+        width: 35vw;
+
     }
 
     .accordion:hover .accordion-item__trigger {
@@ -102,10 +100,6 @@
         font-size: 1.5rem;
     }
 
-    .mem {
-        width: 45vw;
-    }
-
     .accordion-item__trigger {
         background-size: 1.8rem;
     }
@@ -125,7 +119,7 @@
         font-size: 0.8rem;
     }
 
-    .mem {
-        width: 39vw;
+    .accordion-item__input:checked~.accordion-item__trigger .mem {
+        width: 36vw;
     }
 }
