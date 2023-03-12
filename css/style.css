@@ -43,7 +43,7 @@
     background-image: url(../img/icon_pulse.png);
     background-repeat: no-repeat;
     background-size: 0;
-    background-position: top 5% right 2%;
+    background-position: top 1rem right 1rem;
     cursor: pointer;
     color: #0442ae;
 }
@@ -55,10 +55,11 @@
     overflow: hidden;
     transition: 0.5s;
     cursor: pointer;
+    height: 0;
 }
 
 .accordion-item__input:checked~.accordion-item__trigger {
-    background-color: aliceblue;
+    background-color: #F0F8FF;
     background-image: url(../img/icon_cross.png);
     color: #000;
 }
@@ -70,14 +71,24 @@
 }
 
 .accordion-item__input:checked~.accordion-item__trigger .mem {
-    width: 35vw;
+    width: 30vw;
+}
+.accordion-item__input:checked~.accordion-item__trigger .accordion-item__content {
+    height: auto;
 }
 
 /* media start */
 @media screen and (min-width: 821px) {
     .accordion-item:hover .mem {
-        width: 35vw;
+        width: 30vw;
+    }
 
+    .accordion-item:hover .accordion-item__trigger {
+        background-image: url(../img/icon_cross.png);
+    }
+
+    .accordion-item:hover .accordion-item__content  {
+        height: auto;
     }
 
     .accordion:hover .accordion-item__trigger {
@@ -85,11 +96,26 @@
         color: #000;
     }
 
+    .accordion-item:active .accordion-item__trigger  {
+        color: #0442ae;
+        background-image: url(../img/icon_cross-active.png);
+    }
+
+    .accordion-item:active .mem {
+        background-color: rgb(184, 189, 189);
+    }
+        
+
 }
 
 @media screen and (max-width: 820px) {
     .wrapper {
         width: 90vw;
+    }
+
+    .accordion-item__trigger {
+        background-position: top 0.7rem right 0.5rem;
+
     }
 
     .h1-task__title {
@@ -121,5 +147,9 @@
 
     .accordion-item__input:checked~.accordion-item__trigger .mem {
         width: 36vw;
+    }
+
+    .accordion-item__trigger {
+        background-size: 1.2rem;
     }
 }
