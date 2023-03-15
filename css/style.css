@@ -91,6 +91,9 @@
     color: #000;  
 }
 
+.accordion-item__input:checked~.accordion-item__trigger {
+    color: #000;  
+}
 .mem {
     width: 0;
     transition: 0.5s;
@@ -138,6 +141,9 @@
     .accordion:hover .accordion-item__heading_icon {
         background-size: 2.5rem;
         color: #000;
+    }
+    .accordion:hover .accordion-item__trigger {
+        color: #000;  
     }
   }
 
