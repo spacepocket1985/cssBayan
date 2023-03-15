@@ -18,7 +18,7 @@
 
 /* accordion */
 .accordion {
-    width: 50vw;
+    width: 45vw;
     margin: auto;
     margin-top: 2rem;
     padding-bottom: 1rem;
@@ -40,12 +40,37 @@
     font-weight: bold;
     border: .125rem dashed rgb(132, 122, 122);
     transition: 0.5s;
-    background-image: url(../img/icon_pulse.png);
+    /* background-image: url(../img/icon_pulse.png);
     background-repeat: no-repeat;
     background-size: 0;
-    background-position: top 1rem right 1rem;
+    background-position: top 1rem right 1rem; */
     cursor: pointer;
     color: #0442ae;
+}
+
+.accordion-item__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-item__heading__title {
+    display: block;
+}
+
+.accordion-item__heading_icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 0;
+    background-image: url(../img/icons8_cross-004.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    transform: rotate(45deg);
+    
+    
+
 }
 
 .accordion-item__content {
@@ -58,10 +83,12 @@
     height: 0;
 }
 
-.accordion-item__input:checked~.accordion-item__trigger {
-    background-color: #F0F8FF;
-    background-image: url(../img/icon_cross.png);
-    color: #000;
+
+
+.accordion-item__input:checked~.accordion-item__trigger .accordion-item__heading_icon{
+    transition: all 0.5s ease-out;
+    transform: rotate(90deg);
+    color: #000;  
 }
 
 .mem {
@@ -70,7 +97,7 @@
 }
 
 .accordion-item__input:checked~.accordion-item__trigger .mem {
-    width: 30vw;
+    width: 25vw;
 }
 .accordion-item__input:checked~.accordion-item__trigger .accordion-item__content {
     height: auto;
@@ -80,7 +107,11 @@
 
 .accordion-item:active .accordion-item__trigger  {
     color: #0442ae;
-    background-image: url(../img/icon_cross-active.png);
+}
+
+.accordion-item:active .accordion-item__heading_icon  {
+    color: #0442ae;
+    background-image: url(../img/icons8_cross-004-active.png);
 }
 
 .accordion-item:active .mem {
@@ -96,16 +127,16 @@
         width: 30vw;
     }
 
-    .accordion-item:hover .accordion-item__trigger {
-        background-image: url(../img/icon_cross.png);
+    .accordion-item:hover .accordion-item__heading_icon {
+        transform: rotate(90deg);
     }
 
     .accordion-item:hover .accordion-item__content  {
         height: auto;
     }
 
-    .accordion:hover .accordion-item__trigger {
-        background-size: 1.8rem;
+    .accordion:hover .accordion-item__heading_icon {
+        background-size: 2.5rem;
         color: #000;
     }
   }
@@ -115,7 +146,7 @@
 
     .accordion-item:active .accordion-item__trigger  {
         color: #0442ae;
-        background-image: url(../img/icon_cross-active.png);
+        /* background-image: url(../img/icon_cross-active.png); */
     }
 
     .accordion-item:active .mem {
@@ -146,8 +177,9 @@
         font-size: 1.5rem;
     }
 
-    .accordion-item__trigger {
-        background-size: 1.7rem;
+    .accordion-item__heading_icon {
+        background-size: 2.2rem;
+        margin-left: 5px;
     }
 
     .accordion-item__input:checked~.accordion-item__trigger .mem {
@@ -166,15 +198,17 @@
     }
 
     .accordion-item {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 
     .accordion-item__input:checked~.accordion-item__trigger .mem {
         width: 45vw;
     }
 
-    .accordion-item__trigger {
-        background-size: 1.2rem;
+    .accordion-item__heading_icon {
+        background-size: 2rem;
+        width: 2rem;
+        height: 2rem;
     }
 }
 
